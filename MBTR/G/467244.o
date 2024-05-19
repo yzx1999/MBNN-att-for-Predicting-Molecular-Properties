@@ -1,0 +1,13 @@
+============================================================
+============================================================
+Job ID: wangzx
+Job name: wangzx
+Number of nodes: 1
+Number of processors: 8
+Task is running on the following nodes:
+gpu015
+OMP_NUM_THREADS = 
+python path = /public/home/liuzhipan/wangzx/miniconda3/envs/venv/bin/python
+availiable gpu = 0
+============================================================
+

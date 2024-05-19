@@ -1,0 +1,53 @@
+#!/bin/bash
+#SBATCH --job-name=shang-testmulti      #作业名
+#SBATCH --nodes=28               #节点数
+#SBATCH --ntasks-per-node=64       #每个节点使用核心数
+#SBATCH --exclusive               #独占使用的节点
+#SBATCH -t  99:00:00              #作业运行时间
+#SBATCH --output=%j.log          #标准输出
+#SBATCH --partition=queue3-1   #作业使用队列
+
+ulimit -s unlimited
+# load the environment              #加载环境变量，根据作业需求调整 
+module purge
+
+echo "============================================================"
+env | grep "MKLROOT="
+echo "============================================================"
+echo "Job ID: $SLURM_JOB_NAME"
+echo "Job name: $SLURM_JOB_NAME"
+echo "Number of nodes: $SLURM_JOB_NUM_NODES"
+echo "Number of processors: $SLURM_NTASKS"
+echo "Task is running on the following nodes:"
+echo $SLURM_JOB_NODELIST
+echo "OMP_NUM_THREADS = $SLURM_CPUS_PER_TASK"
+echo "============================================================"
+echo
+
+
+#module load compiler/intel/2021.3.0   ### for remake prog on jinsi-cluster
+PROGcdxremake="/public/home/liuzhipan/cdx/bin/laspcdx_remake"
+PROGcdxremake_double="/public/home/liuzhipan/cdx/bin/laspcdx_remake_double"
+PROGcdxremake_stable="/public/home/liuzhipan/cdx/bin/laspcdx_remake_stable"
+#module load compiler/intel/2018.5.274   ### for the programs copied from home
+PROGlasp="/public/home/liuzhipan/bin/lasp.nnlj-eonly"
+PROGrc="/public/home/liuzhipan/bin/lasp.rc"
+PROGgamma="/public/home/liuzhipan/bin/lasp.gamma"
+PROGvasp="/public/home/liuzhipan/bin/vasp_std_5.4.1"
+PROGcdx="/public/home/liuzhipan/cdx/bin/laspcdx"
+#module load apps/vasp/intelmpi/5.4.4   ### for using vasp_std and vasp_gam on jinsi-cluster
+module load compiler/intel/2021.3.0   ### also for using vasp_std and vasp_gam on jinsi-cluster
+PROGvaspstd="/software/apps/vasp/intelmpi/5.4.4/bin/vasp_std"
+PROGvaspgam="/software/apps/vasp/intelmpi/5.4.4/bin/vasp_gam"
+
+
+#module load mpi/intelmpi/2021.3.0   ### necessary to load mpirun
+source /public/home/liuzhipan/intel16/impi/5.1.3.181/bin64/mpivars.sh
+#PROG=/public/home/liuzhipan/NN-fit/RuZnZrOH/autopy/NN/lasp.xiext-lj-multilayerstack
+PROG=/public/home/liuzhipan/NN-fit/yzx-pro/softmaxE/lasp
+#lasp.layernor-property-expnosoft
+#g/RuZnZrOH_train_debug/lasp.test
+mpirun $PROG > output
+#export I_MPI_PMI_LIBRARY=/opt/gridview/slurm/lib/libpmi2.so   ### necessary to use srun
+#srun --mpi=pmi2 $PROG
+

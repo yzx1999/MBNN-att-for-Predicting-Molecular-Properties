@@ -1,0 +1,28 @@
+#
+Ntrain 121320
+#Ntrain 1000
+explore_type train
+# Input of training
+#
+Jobname  CHONF
+Ntest  0
+#Ntest  100
+NNepochs     240000
+Ewaldflag    0  
+readScale    1 #decide read Gmin/Gmax
+readSympara  0  # decide read w,b
+OutpotFreq   400
+
+#
+# Specify network information
+#
+%block netinfo
+ N   CHONF.input
+ C   CHONF.input
+ H   CHONF.input
+ O   CHONF.input
+ F   CHONF.input
+%endblock netinfo
+Histbfgs     4000
+noForce 1
+Nparabfgs 64

@@ -1,0 +1,10 @@
+calfact  10001 0  0 0
+#calfact   100000  1000   4
+outfact   0.01  0.01    0.0
+train_RMS     1
+test_RMS      0
+Time_step        1
+BFGS_loop        1
+rTrainRMS  0
+rTestRMS   0
+nfor 0
