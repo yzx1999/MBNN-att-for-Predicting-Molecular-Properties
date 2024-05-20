@@ -9,4 +9,4 @@ For the local descriptor ACSF and SOAP, each atom in the structure generates its
 
 For the PTSD, we implement the calculation of PTSD through the LASP program.
 
-For MBNN, we have provided an example for each of the extensive and intensive properties: U0 and HOMO. In the folder, there are corresponding Lasp program for training, specifically lasp-Exten and lasp-Inten.
+For MBNN-att, we have provided an example for each of the extensive and intensive properties: U0 and HOMO. In the folder, there are corresponding Lasp program for training, specifically lasp-Exten and lasp-Inten.
