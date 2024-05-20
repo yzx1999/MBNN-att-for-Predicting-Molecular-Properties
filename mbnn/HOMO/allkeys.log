@@ -1,0 +1,88 @@
+explore_type   train
+Symm_lattice   F
+Bravias_cell   T
+finish_script   
+continue.input   
+Bravias_cell   T
+str_input   
+SSW.printbader   F
+ranseed          -666
+ 
+Jobname      CHONF               
+Ntrain       120                 
+Nbatch       1                   
+Nstrepocore  1                   
+trEFSQ       0
+Ntest        0                   
+NNepochs     20000               
+# decide to provide force file.
+noForce      1
+# decide to read scale from pot input.
+readScale    0
+# frequency of output test data
+Frqoutput    1                   
+# frequency output pot
+OutpotFreq   400                 
+# type of optimizer, 0->SGD, 1->LBFGS, 2->ADAM
+Optimizers   1
+# Number of cores to update Hessian in bfgs parallelly
+Nparabfgs    80                  
+# frequency output BFGS history
+Nhistprint   99999999            
+# stepsize of SGD
+SGDeta        0.50000002E-03
+# max history of LBFGS
+Histbfgs     4000                
+# max stepsize of LBFGS
+Stepbfgs      0.50000000E+00
+# type of training: 0 -> origin, 2 -> trainNN+Knetadd
+TrainType    0
+# beta in ADAM
+ADAMBETA      0.89999998E+00 0.99900001E+00
+# L2 regularization
+L2regular         0.00000000
+# evaluate test from pot
+evaltest      0
+# location of save pot
+testdir      SavePot                                                                                                                 
+# print symmetry functions
+SymPrint     0
+# output energy range of structures per atom and per str
+outErange          0.0000   -100.0000
+outEstrange          0.0000   -100.0000
+# output force range of structures, max force in atom
+outFrange          0.0000     -1.0000
+# power of cost function : C = delt**p
+CostPower      2
+SymBorder     0
+ValBorder           0.9000
+# energy screen basis
+Escreensymf    0
+# energy screen min output deltE
+EscMinE           0.100000
+# Tolerance of loss function increase
+Lostol            0.001000
+# energy screen output info
+Eswriteinfo    0
+# energy screen output Element
+EsElement      1
+# energy screen output No. symf
+EsNosymf       1
+# is read fix potparameter file
+FixPotpara     0 
+FixGminGmax    0 
+# decide subtrate potential
+Subpotential   0
+# decide not to train some atoms forces, if it is exactly equal to 0
+FixForce       0
+# maximum criterion to judge whether an atom should be fix
+MaxForce       0.10000000E-09
+ 
+%block netinfo
+ #  elename  filename
+%endblock netinfo
+ 
+%block cominfo
+ #  elename  filename
+%endblock cominfo
+fixtrainatm fixpara # example : 1-5,20-40  (no space between different pair)
