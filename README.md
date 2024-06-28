@@ -21,3 +21,7 @@ The project provides a comprehensive framework for predicting molecular properti
 
 ## Usage
 1. First, compute the structural descriptors. Execute the ``` load_data.py ``` file corresponding to the property you want to predict. This will generate a data folder. In the process folder, a data_v3.pt file will be created, which contains the element symbols, 3D coordinates, structural descriptors, and the target molecular properties for the molecules.
+2. After obtaining the processed data, you can run python main.py. This will continuously output the loss for each step, as well as the MAE on the train and test sets. The program will print the "best" row, which represents the best result obtained during the current training.
+
+## Set up parameters
+
