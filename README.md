@@ -2,7 +2,7 @@
 
 ## Many-Body Function Neural Network with Atomic Attention Mechanism (MBNN-att) for Predicting Molecular Properties
 
-![MBNN-att Model](https://github.com/yzx1999/MBNN-att-for-Predicting-Molecular-Properties/blob/main/TOC.jpg =90x150)
+<img src="mbnn-att.png" width="90" height="150">
 
 ## Introduction
 This project includes a series of explicit function-type molecular structure descriptors, as well as corresponding neural networks for modeling molecular properties. The molecular structure descriptors include: MBTR, ACSF, SOAP, and PTSD. It also provides an example of MBNN-att for both extensive and intensive properties: ``` U0 ``` and ``` HOMO ```. The folder contains the corresponding LASP programs for training, specifically lasp-Exten and lasp-Inten.
