@@ -24,4 +24,6 @@ The project provides a comprehensive framework for predicting molecular properti
 2. After obtaining the processed data, you can run python main.py. This will continuously output the loss for each step, as well as the MAE on the train and test sets. The program will print the "best" row, which represents the best result obtained during the current training.
 
 ## Set up parameters
-
+1. Cutoff: The cutoff value rcut in ``` load_data.py ```.
+2. Number of hidden layers: The number of hidden layers num_layers in ``` main.py ```.
+3. Batch size: The batch_size in ``` main.py ```.
