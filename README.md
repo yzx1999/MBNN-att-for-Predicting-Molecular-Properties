@@ -20,4 +20,4 @@ The project provides a comprehensive framework for predicting molecular properti
 4. LASP 3.4.0 (http://www.lasphub.com/#/lasp/download)
 
 ## Usage
-First, compute the structural descriptors. Execute the ``` load_data.py ``` file corresponding to the property you want to predict. This will generate a data folder. In the process folder, a data_v3.pt file will be created, which contains the element symbols, 3D coordinates, structural descriptors, and the target molecular properties for the molecules.
+1. First, compute the structural descriptors. Execute the ``` load_data.py ``` file corresponding to the property you want to predict. This will generate a data folder. In the process folder, a data_v3.pt file will be created, which contains the element symbols, 3D coordinates, structural descriptors, and the target molecular properties for the molecules.
