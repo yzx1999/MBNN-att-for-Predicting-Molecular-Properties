@@ -17,3 +17,7 @@ The project provides a comprehensive framework for predicting molecular properti
 1. Pytorch with version 2.0.0 (https://github.com/pytorch/pytorch)
 2. Pytorch Geometric with version 2.3.1 (https://github.com/pyg-team/pytorch_geometric)
 3. DScribe with version 2.0.1 (https://github.com/SINGROUP/dscribe)
+4. LASP 3.4.0 (http://www.lasphub.com/#/lasp/download)
+
+## Usage
+
