@@ -31,7 +31,7 @@ The project provides a comprehensive framework for predicting molecular properti
 2. Number of hidden layers: The number of hidden layers num_layers in ``` main.py ```.
 3. Batch size: The batch_size in ``` main.py ```.
 
-## result
+## Result
 | Property | Unit | MBTR | ACSF | SOAP | PTSD | MBNN-att |
 |:------|:------|:-------------:|:-------------:|:----------------:|:----------------:|:----------------:|
 | μ | D | 0.293 |	0.065	| 0.182	| 0.094 | 0.021 |
